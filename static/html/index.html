@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title>HTTP Methods for Users and Products</title>
+</head>
+<body>
+    <h2>General Routing</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Path</th>
+                <th>HTTP Methods</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>/</td>
+                <td>GET</td>
+                <td>retrieve data from index.html</td>
+            </tr>  
+        </thead>
+    </table>
+    <h2>HTTP Methods for Users</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Path</th>
+                <th>HTTP Methods</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>/users</td>
+                <td>GET</td>
+                <td>Retrieves a list of users.</td>
+            </tr>
+            <tr>
+                <td>/register</td>
+                <td>POST</td>
+                <td>Creates a new user.</td>
+            </tr>
+            <tr>
+                <td>/users/:id</td>
+                <td>GET</td>
+                <td>Retrieves details of a specific user.</td>
+            </tr>
+            <tr>
+                <td>/users/:id</td>
+                <td>PATCH</td>
+                <td>Updates details of a specific user.</td>
+            </tr>
+            <tr>
+                <td>/users/:id</td>
+                <td>DELETE</td>
+                <td>Deletes a specific user.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>HTTP Methods for Products</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Path</th>
+                <th>HTTP Methods</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>/product</td>
+                <td>GET</td>
+                <td>Retrieves a list of products.</td>
+            </tr>
+            <tr>
+                <td>/update</td>
+                <td>POST</td>
+                <td>Creates a new product.</td>
+            </tr>
+            <tr>
+                <td>/products/:id</td>
+                <td>GET</td>
+                <td>Retrieves details of a specific product.</td>
+            </tr>
+            <tr>
+                <td>/products/:id</td>
+                <td>PATCH</td>
+                <td>Updates details of a specific product.</td>
+            </tr>
+            <tr>
+                <td>/products/:id</td>
+                <td>DELETE</td>
+                <td>Deletes a specific product.</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
