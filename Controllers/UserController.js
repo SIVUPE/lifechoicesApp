@@ -16,6 +16,7 @@ userRouter.get('/',(req, res)=>{
         })
     }
  })
+  
 
 
 userRouter.get('/:id',(req, res)=>{

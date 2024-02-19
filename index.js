@@ -1,13 +1,14 @@
 import { userRouter, express } from "./Controllers/UserController.js";
 import { productRouter } from "./Controllers/ProductsController.js";
-import { cookieParser} from "cookie-parser";
+import cookieParser from "cookie-parser";
 import { errorHandling} from "./middleware/ErrorHandling.js";
 import path from "path";
+import cors from "cors"
 import { config } from "dotenv";
 config()
 
 const app = express()
-const port = +process.env.PORT || 5000
+const port = +process.env.PORT || 4000
 
 app.use((req, res, next)=>{
     res.header("Access-control-Allow-Origin","*");
@@ -28,7 +29,7 @@ app.use(
     cors()
 )
 app.get('^/$|/lifechoices', (req, res)=>{
-    res.status(200).sendFile(path.join(_dirname, './static/html/index.html'))
+    res.status(200).sendFile(path.join(__dirname, './static/index.html'))
 })
 app.use('/users',userRouter)
 app.use('/products', productRouter)
